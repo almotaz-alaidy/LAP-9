@@ -6,7 +6,7 @@ class Message extends StatelessWidget {
       {required this.MyTitle, required this.MyIcon, required this.MySubTitle});
   String? MyTitle;
   String? MySubTitle;
-  String? MyIcon;
+  IconData? MyIcon;
   Future<void> _makeMessage() async {
     final Uri launchUri = Uri(
       scheme: 'sms',
@@ -22,7 +22,7 @@ class Message extends StatelessWidget {
       child: ListTile(
         title: Text("$MyTitle"),
         subtitle: Text("$MySubTitle"),
-        leading: Image(image: NetworkImage(MyIcon!)),
+        leading: Icon(MyIcon),
       ),
     );
   }

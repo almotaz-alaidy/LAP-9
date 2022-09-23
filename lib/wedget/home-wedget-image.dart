@@ -14,7 +14,7 @@ class HomeWedgetImage extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.all(20),
         alignment: Alignment.center,
-        height: 200,
+        height: 300,
         width: 200,
         decoration: BoxDecoration(
           image: DecorationImage(

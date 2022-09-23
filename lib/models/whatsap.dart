@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class WhatsappUrl extends StatelessWidget {
   WhatsappUrl({this.MyIcon, this.MySubTitle, this.MyTitle});
-  String? MyIcon;
+  IconData? MyIcon;
   String? MyTitle;
   String? MySubTitle;
 
@@ -22,7 +22,7 @@ class WhatsappUrl extends StatelessWidget {
     return GestureDetector(
       onTap: _launchUrl3,
       child: ListTile(
-        leading: Image(image: NetworkImage(MyIcon!)),
+        leading: Icon(MyIcon),
         title: Text(MyTitle!),
         subtitle: Text(MySubTitle!),
       ),

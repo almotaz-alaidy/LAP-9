@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class InstagrameUrl extends StatelessWidget {
   InstagrameUrl({this.MyIcon, this.MySubTitle, this.MyTitle});
-  String? MyIcon;
+  IconData? MyIcon;
   String? MyTitle;
   String? MySubTitle;
 
@@ -23,7 +23,7 @@ class InstagrameUrl extends StatelessWidget {
     return GestureDetector(
       onTap: _launchUrl2,
       child: ListTile(
-        leading: Image(image: NetworkImage(MyIcon!)),
+        leading: Icon(MyIcon),
         title: Text(MyTitle!),
         subtitle: Text(MySubTitle!),
       ),

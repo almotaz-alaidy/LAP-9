@@ -13,8 +13,8 @@ class Conmain extends StatelessWidget {
     return GestureDetector(
       onTap: ontap0,
       child: Container(
-          margin: EdgeInsets.all(20),
-          alignment: Alignment.center,
+          // margin: EdgeInsets.all(20),
+          // alignment: Alignment.center,
           // height: 200,
           // width: 200,
           decoration: BoxDecoration(
@@ -28,7 +28,7 @@ class Conmain extends StatelessWidget {
           // decoration: BoxDecoration(
           // color: Color.fromARGB(255, 172, 224, 224),
           // border: Border.all(color: Colors.grey, width: 2.0)),
-          child: Column(
+          child: ListView(
             children: [
               Text(
                 '$title1',

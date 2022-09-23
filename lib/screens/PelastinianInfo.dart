@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:navigatorbar/models/detailsWebsite.dart';
 import 'package:navigatorbar/models/navigation1.dart';
+import 'package:ionicons/ionicons.dart';
 
 import '../models/navi0.dart';
 import '../models/navi2.dart';
@@ -18,13 +20,12 @@ class _PelastinianWarsState extends State<PelastinianWars> {
       length: 3,
       child: Scaffold(
           appBar: AppBar(
+            actions: [DetailsWebsite()],
+            title: Text("pelastine"),
             bottom: TabBar(tabs: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.laptop),
-              ),
-              IconButton(onPressed: () {}, icon: Icon(Icons.camera)),
-              IconButton(onPressed: () {}, icon: Icon(Icons.message))
+              IconButton(onPressed: () {}, icon: Icon(Ionicons.skull_sharp)),
+              IconButton(onPressed: () {}, icon: Icon(Ionicons.bonfire)),
+              IconButton(onPressed: () {}, icon: Icon(Ionicons.body))
             ]),
             backgroundColor: Color.fromARGB(255, 38, 197, 144),
           ),

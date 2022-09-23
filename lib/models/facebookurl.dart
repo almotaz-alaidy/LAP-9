@@ -6,7 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 class FacebookURL extends StatelessWidget {
   FacebookURL(
       {required this.MyIcon, required this.MySubTitle, required this.MyTitle});
-  String? MyIcon;
+  IconData? MyIcon;
   String? MyTitle;
   String? MySubTitle;
   final Uri _url = Uri.parse('https://www.facebook.com/paltodayps/');
@@ -23,7 +23,7 @@ class FacebookURL extends StatelessWidget {
       onTap: _launchUrl,
       child: Container(
         child: ListTile(
-          leading: Image(image: NetworkImage(MyIcon!)),
+          leading: Icon(MyIcon),
           title: Text("$MyTitle"),
           subtitle: Text("$MySubTitle"),
         ),

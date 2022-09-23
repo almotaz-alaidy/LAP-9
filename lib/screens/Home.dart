@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:navigatorbar/wedget/home-wedget-image.dart';
 import 'package:navigatorbar/wedget/home-wedget-text.dart';
-import '../wedget/services.dart';
 import 'contact.dart';
-import 'PelastinianWars.dart';
+import 'PelastinianInfo.dart';
 import 'service.dart';
 
 class Home extends StatefulWidget {
@@ -14,6 +13,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  String mytext = "";
+  bool vis = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,13 +23,18 @@ class _HomeState extends State<Home> {
         // toolbarHeight: 50,
         backgroundColor: Color.fromARGB(255, 38, 197, 144),
 
-        title: Text(
-          "pelastin history",
-          style: TextStyle(
-              fontFamily: "Combo-Regular",
-              fontSize: 19,
-              fontStyle: FontStyle.italic,
-              color: Colors.black),
+        title: Row(
+          children: [
+            Text(
+              "pelastin ",
+              style: TextStyle(
+                  fontFamily: "Combo-Regular",
+                  fontSize: 19,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.black),
+            ),
+            Icon(Icons.rocket),
+          ],
         ),
         actions: [
           GestureDetector(
@@ -44,7 +50,7 @@ class _HomeState extends State<Home> {
             },
             child: Row(children: [
               Text(
-                "contact us to give your opinion ",
+                "contact us ",
                 style: TextStyle(
                     fontFamily: "Combo-Regular",
                     fontSize: 15,
@@ -76,7 +82,35 @@ class _HomeState extends State<Home> {
         child: ListView(children: [
           HomeWedgetText(
               MyFontFamily: "Combo-Regular",
-              MyText: "click on the image below to read aboute pelastine"),
+              MyText:
+                  "to look to info aboute pelastine click on image below :"),
+          HomeWedgetText(
+            MyFontFamily: "MyFontFamily",
+            MyText: "$mytext",
+          ),
+          ElevatedButton.icon(
+            icon: Icon(Icons.read_more),
+            onLongPress: () {
+              setState(() {
+                vis = false;
+              });
+            },
+            onPressed: () {
+              setState(() {
+                if (vis == true) {
+                  mytext =
+                      "بقيت فلسطين على مر العصور بلداً عامراً بازدهار شهدت عليه ووثّقته الآثار المنتشرة في مختلف أرجائها، وتعمر فلسطين العديد من القرى والبلدات والمدن، ومن أشهرها: القدس، وتل الربيع، وصفد، وحيفا، وبيسان، وعكا، ونابلس، وطولكرم، وقلقيلية، وقيسارية، ورام الله، والبيرة، واللد، والرملة، ويافا، وأريحا، وبيت لحم، والخليل، وعسقلان، وأسدود، وغزة، وخان يونس، ورفح، وبير السبع.";
+                } else {
+                  mytext = "";
+                }
+              });
+            },
+            label: Text("read more"),
+            style: ButtonStyle(
+              backgroundColor:
+                  MaterialStateProperty.all(Color.fromARGB(255, 125, 247, 168)),
+            ),
+          ),
           HomeWedgetImage(
             OnTapping: () {
               Navigator.push(context, MaterialPageRoute(
@@ -91,18 +125,20 @@ class _HomeState extends State<Home> {
           SizedBox(
             height: 50,
           ),
-          Conmain(
-            linkimage:
-                'https://mediaaws.almasryalyoum.com/news/verylarge/2019/01/13/884010_0.jpeg',
-            title1: 'Services',
-            ontap0: () {
+          HomeWedgetText(
+              MyFontFamily: "Combo-Regular",
+              MyText: "to look to oure services click on image below :"),
+          HomeWedgetImage(
+            MyImage:
+                "https://www.enwallpaper.com/wp-content/uploads/2021/05/080bcd7b0983b09b5696cc2325915000-e1620762952105.jpg",
+            OnTapping: () {
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
                   return Servics();
                 },
               ));
             },
-          ),
+          )
         ]),
       ),
     );

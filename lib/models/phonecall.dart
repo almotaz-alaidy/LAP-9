@@ -8,7 +8,7 @@ class CallPhone extends StatelessWidget {
       {required this.MyTitle, required this.MyIcon, required this.MySubTitle});
   String? MyTitle;
   String? MySubTitle;
-  String? MyIcon;
+  IconData? MyIcon;
   Future<void> _makePhoneCall() async {
     final Uri launchUri = Uri(
       scheme: 'tel',
@@ -24,7 +24,7 @@ class CallPhone extends StatelessWidget {
       child: ListTile(
         title: Text("$MyTitle"),
         subtitle: Text("$MySubTitle"),
-        leading: Image(image: NetworkImage(MyIcon!)),
+        leading: Icon(MyIcon),
       ),
     );
   }
