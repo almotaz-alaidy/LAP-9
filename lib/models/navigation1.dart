@@ -4,7 +4,7 @@ import 'package:navigatorbar/wedget/home-wedget-text.dart';
 
 final pages1 = [
   Container(
-    color: Color.fromARGB(255, 149, 182, 240),
+    color: Color.fromARGB(255, 245, 243, 204),
     child: ListView(
       children: [
         Column(
@@ -56,7 +56,7 @@ final pages1 = [
     ),
   ),
   Container(
-    color: Color.fromARGB(255, 149, 182, 240),
+    color: Color.fromARGB(255, 245, 243, 204),
     child: ListView(
       children: [
         Column(
@@ -100,7 +100,7 @@ final pages1 = [
     ),
   ),
   Container(
-    color: Color.fromARGB(255, 149, 182, 240),
+    color: Color.fromARGB(255, 245, 243, 204),
     child: ListView(
       children: [
         Column(

@@ -21,13 +21,36 @@ class _PelastinianWarsState extends State<PelastinianWars> {
       child: Scaffold(
           appBar: AppBar(
             actions: [DetailsWebsite()],
-            title: Text("pelastine"),
+            title: Text(
+              "pelastine",
+              style: TextStyle(
+                  fontSize: 25,
+                  fontFamily: "Combo-Regular",
+                  fontWeight: FontWeight.bold),
+            ),
             bottom: TabBar(tabs: [
-              IconButton(onPressed: () {}, icon: Icon(Ionicons.skull_sharp)),
-              IconButton(onPressed: () {}, icon: Icon(Ionicons.bonfire)),
-              IconButton(onPressed: () {}, icon: Icon(Ionicons.body))
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Ionicons.skull_sharp,
+                    color: Color.fromARGB(255, 247, 246, 246),
+                  )),
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    size: 30,
+                    Ionicons.bonfire,
+                    color: Color.fromARGB(255, 176, 62, 54),
+                  )),
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    size: 30,
+                    Ionicons.body,
+                    color: Color.fromARGB(231, 192, 190, 101),
+                  ))
             ]),
-            backgroundColor: Color.fromARGB(255, 38, 197, 144),
+            backgroundColor: Color.fromARGB(255, 122, 173, 117),
           ),
           body: TabBarView(
             children: [

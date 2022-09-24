@@ -21,7 +21,10 @@ class Email extends StatelessWidget {
       onTap: _launchUrl,
       child: Container(
         child: ListTile(
-          leading: Icon(MyIcon),
+          leading: Icon(
+            MyIcon,
+            color: Colors.red,
+          ),
           title: Text("$MyTitle"),
           subtitle: Text("$MySubTitle"),
         ),

@@ -24,18 +24,19 @@ class DetailsWebsite extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            "discover pelastinian news",
+            "news",
             style: TextStyle(
-              fontFamily: "Combo-Regular",
-              fontSize: 15,
-              fontStyle: FontStyle.italic,
-            ),
+                fontFamily: "Combo-Regular",
+                fontSize: 25,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold),
           ),
           SizedBox(
             width: 10,
           ),
           Icon(
-            Ionicons.enter_sharp,
+            size: 30,
+            Ionicons.exit_outline,
           )
         ],
       ),

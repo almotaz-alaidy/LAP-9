@@ -23,8 +23,8 @@ class _Navi0State extends State<Navi0> {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 38, 197, 144),
-            Color.fromARGB(255, 125, 247, 168)
+            Color.fromARGB(255, 250, 255, 255),
+            Color.fromARGB(255, 184, 187, 185),
           ],
         ),
       ),
@@ -83,8 +83,8 @@ class _Navi0State extends State<Navi0> {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 38, 197, 144),
-            Color.fromARGB(255, 125, 247, 168)
+            Color.fromARGB(255, 250, 255, 255),
+            Color.fromARGB(255, 184, 187, 185),
           ],
         ),
       ),
@@ -141,8 +141,8 @@ class _Navi0State extends State<Navi0> {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 38, 197, 144),
-            Color.fromARGB(255, 125, 247, 168)
+            Color.fromARGB(255, 250, 255, 255),
+            Color.fromARGB(255, 184, 187, 185),
           ],
         ),
       ),

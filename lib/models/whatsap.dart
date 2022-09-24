@@ -22,7 +22,10 @@ class WhatsappUrl extends StatelessWidget {
     return GestureDetector(
       onTap: _launchUrl3,
       child: ListTile(
-        leading: Icon(MyIcon),
+        leading: Icon(
+          MyIcon,
+          color: Color.fromARGB(255, 2, 138, 7),
+        ),
         title: Text(MyTitle!),
         subtitle: Text(MySubTitle!),
       ),

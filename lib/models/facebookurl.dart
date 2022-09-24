@@ -23,7 +23,10 @@ class FacebookURL extends StatelessWidget {
       onTap: _launchUrl,
       child: Container(
         child: ListTile(
-          leading: Icon(MyIcon),
+          leading: Icon(
+            MyIcon,
+            color: Color.fromARGB(255, 4, 4, 148),
+          ),
           title: Text("$MyTitle"),
           subtitle: Text("$MySubTitle"),
         ),

@@ -26,16 +26,17 @@ class Donation extends StatelessWidget {
           Text(
             "donation for gaza",
             style: TextStyle(
-              fontFamily: "Combo-Regular",
-              fontSize: 15,
-              fontStyle: FontStyle.italic,
-            ),
+                fontFamily: "Combo-Regular",
+                fontSize: 20,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold),
           ),
           SizedBox(
             width: 10,
           ),
           Icon(
             Ionicons.send_sharp,
+            size: 30,
           )
         ],
       ),

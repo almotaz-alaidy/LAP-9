@@ -23,7 +23,10 @@ class InstagrameUrl extends StatelessWidget {
     return GestureDetector(
       onTap: _launchUrl2,
       child: ListTile(
-        leading: Icon(MyIcon),
+        leading: Icon(
+          MyIcon,
+          color: Color.fromARGB(255, 113, 53, 107),
+        ),
         title: Text(MyTitle!),
         subtitle: Text(MySubTitle!),
       ),

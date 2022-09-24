@@ -21,7 +21,7 @@ class _ContactUsState extends State<ContactUs> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 241, 173, 255),
+          backgroundColor: Color.fromARGB(255, 122, 173, 117),
           bottom: TabBar(tabs: [
             IconButton(
               onPressed: () {},
@@ -53,14 +53,15 @@ class _ContactUsState extends State<ContactUs> {
         body: Container(
           padding: EdgeInsets.only(top: 50, bottom: 30),
           alignment: Alignment.center,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 241, 173, 255),
-                Color.fromARGB(255, 239, 99, 249)
-              ],
-            ),
-          ),
+          // decoration: BoxDecoration(
+          //   gradient: LinearGradient(
+          //     colors: [
+          //       Color.fromARGB(255, 241, 173, 255),
+          //       Color.fromARGB(255, 239, 99, 249)
+          //     ],
+          //   ),
+          // ),
+          color: Color.fromARGB(223, 214, 244, 211),
           child: TabBarView(children: [
             Container(
               child: ListView(

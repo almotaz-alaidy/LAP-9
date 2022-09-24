@@ -12,11 +12,13 @@ final pages1 = [
     decoration: BoxDecoration(
       gradient: LinearGradient(
         colors: [
-          Color.fromARGB(255, 38, 197, 144),
-          Color.fromARGB(255, 125, 247, 168)
+          Color.fromARGB(255, 148, 255, 146),
+          Color.fromARGB(255, 100, 185, 113)
         ],
       ),
     ),
+    // color: Color.fromARGB(255, 31, 199, 29),
+
     child: ListView(
       children: [
         Center(
@@ -70,8 +72,8 @@ final pages1 = [
     decoration: BoxDecoration(
       gradient: LinearGradient(
         colors: [
-          Color.fromARGB(255, 38, 197, 144),
-          Color.fromARGB(255, 125, 247, 168)
+          Color.fromARGB(255, 148, 255, 146),
+          Color.fromARGB(255, 100, 185, 113)
         ],
       ),
     ),
@@ -133,8 +135,8 @@ final pages1 = [
     decoration: BoxDecoration(
       gradient: LinearGradient(
         colors: [
-          Color.fromARGB(255, 38, 197, 144),
-          Color.fromARGB(255, 125, 247, 168)
+          Color.fromARGB(255, 148, 255, 146),
+          Color.fromARGB(255, 100, 185, 113)
         ],
       ),
     ),
