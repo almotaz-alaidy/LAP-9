@@ -21,21 +21,19 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // toolbarHeight: 100,
-        // toolbarHeight: 50,
         backgroundColor: Color.fromARGB(255, 122, 173, 117),
-
         title: Row(
           children: [
             Text(
               "pelastin ",
               style: TextStyle(
-                  fontFamily: "Combo-Regular",
-                  fontSize: 19,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.black),
+                fontWeight: FontWeight.bold,
+                fontFamily: "Combo-Regular",
+                fontSize: 25,
+                fontStyle: FontStyle.italic,
+              ),
             ),
-            Icon(Icons.rocket),
+            Icon(Icons.rocket, size: 30),
           ],
         ),
         actions: [
@@ -54,17 +52,18 @@ class _HomeState extends State<Home> {
               Text(
                 "contact us ",
                 style: TextStyle(
-                    fontFamily: "Combo-Regular",
-                    fontSize: 15,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black),
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "Combo-Regular",
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                ),
               ),
               SizedBox(
                 width: 10,
               ),
               Icon(
                 Icons.contact_page,
-                color: Colors.black,
+                size: 30,
               )
             ]),
           ),
@@ -73,14 +72,7 @@ class _HomeState extends State<Home> {
       body: Container(
         padding: EdgeInsets.only(top: 50, bottom: 30),
         alignment: Alignment.center,
-        decoration: BoxDecoration(color: Color.fromARGB(255, 170, 214, 166)
-            // gradient: LinearGradient(
-            //   colors: [
-            //     Color.fromARGB(252, 87, 218, 102),
-            //     Color.fromARGB(252, 87, 218, 102),
-            //   ],
-            // ),
-            ),
+        decoration: BoxDecoration(color: Color.fromARGB(255, 170, 214, 166)),
         child: ListView(children: [
           HomeWedgetText(
               MyFontFamily: "Combo-Regular",

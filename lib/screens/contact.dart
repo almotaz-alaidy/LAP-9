@@ -7,6 +7,8 @@ import 'package:navigatorbar/models/instagrameurl.dart';
 import 'package:navigatorbar/models/whatsap.dart';
 import 'package:ionicons/ionicons.dart';
 
+import 'Home.dart';
+
 class ContactUs extends StatefulWidget {
   const ContactUs({super.key});
 
@@ -53,14 +55,6 @@ class _ContactUsState extends State<ContactUs> {
         body: Container(
           padding: EdgeInsets.only(top: 50, bottom: 30),
           alignment: Alignment.center,
-          // decoration: BoxDecoration(
-          //   gradient: LinearGradient(
-          //     colors: [
-          //       Color.fromARGB(255, 241, 173, 255),
-          //       Color.fromARGB(255, 239, 99, 249)
-          //     ],
-          //   ),
-          // ),
           color: Color.fromARGB(223, 214, 244, 211),
           child: TabBarView(children: [
             Container(
@@ -79,7 +73,22 @@ class _ContactUsState extends State<ContactUs> {
                     MyIcon: Ionicons.logo_whatsapp,
                     MySubTitle: "JOIN OURE WHATSAPP GROUP",
                     MyTitle: "FIND US ON WHATSAPP",
-                  )
+                  ),
+                  ElevatedButton.icon(
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll(
+                              Color.fromARGB(255, 122, 173, 117))),
+                      onPressed: () {
+                        setState(() {
+                          Navigator.pop(context, MaterialPageRoute(
+                            builder: (context) {
+                              return Home();
+                            },
+                          ));
+                        });
+                      },
+                      icon: Icon(Icons.arrow_back),
+                      label: Text("home"))
                 ],
               ),
             ),
@@ -89,6 +98,21 @@ class _ContactUsState extends State<ContactUs> {
                     MyIcon: Ionicons.mail_sharp,
                     MySubTitle: "WE WILL ANSWER YOU DIRECTLY",
                     MyTitle: "SEND TO US EMAIL"),
+                ElevatedButton.icon(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(
+                            Color.fromARGB(255, 122, 173, 117))),
+                    onPressed: () {
+                      setState(() {
+                        Navigator.pop(context, MaterialPageRoute(
+                          builder: (context) {
+                            return Home();
+                          },
+                        ));
+                      });
+                    },
+                    icon: Icon(Icons.arrow_back),
+                    label: Text("home"))
               ]),
             ),
             Container(
@@ -102,12 +126,23 @@ class _ContactUsState extends State<ContactUs> {
                     MyTitle: "MESSAGE US",
                     MyIcon: Ionicons.chatbubble_ellipses,
                     MySubTitle: "WE WILL ANSWER YOU DIRECTLY"),
+                ElevatedButton.icon(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(
+                            Color.fromARGB(255, 122, 173, 117))),
+                    onPressed: () {
+                      setState(() {
+                        Navigator.pop(context, MaterialPageRoute(
+                          builder: (context) {
+                            return Home();
+                          },
+                        ));
+                      });
+                    },
+                    icon: Icon(Icons.arrow_back),
+                    label: Text("home"))
               ]),
             ),
-            // ElevatedButton.icon(
-            //     onPressed: () {},
-            //     icon: Icon(Icons.arrow_back),
-            //     label: Text("GO TO HOME PAGE"))
           ]),
         ),
       ),

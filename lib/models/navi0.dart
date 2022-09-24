@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:navigatorbar/screens/Home.dart';
 import 'package:navigatorbar/wedget/home-wedget-text.dart';
 import 'package:navigatorbar/wedget/video(nakba).dart';
 import 'package:navigatorbar/wedget/video(naksa).dart';
@@ -74,7 +75,7 @@ class _Navi0State extends State<Navi0> {
           SizedBox(
             height: 20,
           ),
-          Nakba()
+          Nakba(),
         ],
       ),
     ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:navigatorbar/models/detailsWebsite.dart';
 import 'package:navigatorbar/models/navigation1.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:navigatorbar/screens/Home.dart';
 
 import '../models/navi0.dart';
 import '../models/navi2.dart';
@@ -19,46 +20,67 @@ class _PelastinianWarsState extends State<PelastinianWars> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-          appBar: AppBar(
-            actions: [DetailsWebsite()],
-            title: Text(
-              "pelastine",
-              style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: "Combo-Regular",
-                  fontWeight: FontWeight.bold),
+        appBar: AppBar(
+          actions: [
+            ElevatedButton.icon(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(
+                        Color.fromARGB(255, 122, 173, 117))),
+                onPressed: () {
+                  setState(() {
+                    Navigator.pop(context, MaterialPageRoute(
+                      builder: (context) {
+                        return Home();
+                      },
+                    ));
+                  });
+                },
+                icon: Icon(Icons.arrow_back),
+                label: Text("home")),
+            SizedBox(
+              width: 20,
             ),
-            bottom: TabBar(tabs: [
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Ionicons.skull_sharp,
-                    color: Color.fromARGB(255, 247, 246, 246),
-                  )),
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    size: 30,
-                    Ionicons.bonfire,
-                    color: Color.fromARGB(255, 176, 62, 54),
-                  )),
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    size: 30,
-                    Ionicons.body,
-                    color: Color.fromARGB(231, 192, 190, 101),
-                  ))
-            ]),
-            backgroundColor: Color.fromARGB(255, 122, 173, 117),
+            DetailsWebsite(),
+          ],
+          title: Text(
+            "pelastine",
+            style: TextStyle(
+                fontSize: 25,
+                fontFamily: "Combo-Regular",
+                fontWeight: FontWeight.bold),
           ),
-          body: TabBarView(
-            children: [
-              Navi0(),
-              Navi1(),
-              Navi2(),
-            ],
-          )),
+          bottom: TabBar(tabs: [
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Ionicons.skull_sharp,
+                  color: Color.fromARGB(255, 247, 246, 246),
+                )),
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  size: 30,
+                  Ionicons.bonfire,
+                  color: Color.fromARGB(255, 176, 62, 54),
+                )),
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  size: 30,
+                  Ionicons.body,
+                  color: Color.fromARGB(231, 192, 190, 101),
+                ))
+          ]),
+          backgroundColor: Color.fromARGB(255, 122, 173, 117),
+        ),
+        body: TabBarView(
+          children: [
+            Navi0(),
+            Navi1(),
+            Navi2(),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:navigatorbar/models/Donations.dart';
 
+import 'Home.dart';
+
 class Servics extends StatefulWidget {
   const Servics({super.key});
 
@@ -203,10 +205,28 @@ class _ServicsState extends State<Servics> {
                     ),
                     Center(
                       child: ElevatedButton(
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                                Color.fromARGB(255, 122, 173, 117))),
                         child: Text('Next Page'),
                         onPressed: () {},
                       ),
                     ),
+                    ElevatedButton.icon(
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                                Color.fromARGB(255, 122, 173, 117))),
+                        onPressed: () {
+                          setState(() {
+                            Navigator.pop(context, MaterialPageRoute(
+                              builder: (context) {
+                                return Home();
+                              },
+                            ));
+                          });
+                        },
+                        icon: Icon(Icons.arrow_back),
+                        label: Text("home"))
                   ]),
                 ],
               )),
@@ -418,7 +438,6 @@ class _ServicsState extends State<Servics> {
                     SizedBox(
                       height: 44,
                     ),
-                    // ssssssssssssssssssssssssssssssssssssssss
                     Text(
                       'زعتمانة (كيرنا)',
                       style: TextStyle(fontSize: 20),
@@ -517,10 +536,28 @@ class _ServicsState extends State<Servics> {
                     // sssssssss
                     Center(
                       child: ElevatedButton(
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                                Color.fromARGB(255, 122, 173, 117))),
                         child: Text('Next Page'),
                         onPressed: () {},
                       ),
                     ),
+                    ElevatedButton.icon(
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                                Color.fromARGB(255, 122, 173, 117))),
+                        onPressed: () {
+                          setState(() {
+                            Navigator.pop(context, MaterialPageRoute(
+                              builder: (context) {
+                                return Home();
+                              },
+                            ));
+                          });
+                        },
+                        icon: Icon(Icons.arrow_back),
+                        label: Text("home"))
                   ]),
                 ],
               )
